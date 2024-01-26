@@ -2,13 +2,17 @@ package com.campusland.views;
 
 import java.util.Scanner;
 
+import com.campusland.respository.impl.CrudRepositoryProductoImp;
 import com.campusland.respository.impl.CrudReposotoryClienteImp;
 import com.campusland.services.ServiceCliente;
+import com.campusland.services.ServiceProducto;
 import com.campusland.services.impl.ServiceClienteImpl;
+import com.campusland.services.impl.ServiceProductoImpl;
 
 public class ViewMain {
 
     public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudReposotoryClienteImp());
+    public static final ServiceProducto serviceProducto = new ServiceProductoImpl(new CrudRepositoryProductoImp());
     public static final Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -23,7 +27,7 @@ public class ViewMain {
                     ViewCliente.startMenu();
                     break;
                 case 2:
-                    System.out.println("Menu producto");
+                    ViewProducto.startMenu();
                     break;
                 case 3:
                     System.out.println("Menu factura");

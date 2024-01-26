@@ -32,8 +32,8 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [codigo=" + codigo + ", nombre=" + nombre + ", precioVenta=" + precioVenta + ", precioCompra="
-                + precioCompra + "descripcion=" + descripcion + "]";
+        return "Producto [codigo=" + codigo + ", nombre=" + nombre + ", precioVenta=" + Formato.formatoMonedaPesos(precioVenta) + ", precioCompra="
+                + Formato.formatoMonedaPesos(precioCompra) + " descripcion=" + descripcion + "]";
     }
 
     public String getCodigoNombre() {

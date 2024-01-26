@@ -11,9 +11,9 @@ public interface ServiceCliente {
 
     Cliente porDocumento(String documento)throws ClienteNullException ;
 
-    void crear(Cliente cliente);
+    void crear(Cliente producto);
 
-    void editar(Cliente cliente);
+    void editar(Cliente producto);
 
     void eliminar(String id);
 
