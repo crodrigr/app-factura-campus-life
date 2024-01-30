@@ -1,10 +1,10 @@
-package com.campusland.respository.impl;
+package com.campusland.respository.impl.implproducto;
 
 import java.util.List;
 
 import com.campusland.respository.CrudRepositoryProducto;
 import com.campusland.respository.models.Producto;
-import com.campusland.utils.ConexionBDList;
+import com.campusland.utils.conexionesdb.conexiondblist.ConexionBDList;
 
 public class CrudRepositoryProductoImp implements CrudRepositoryProducto{
 

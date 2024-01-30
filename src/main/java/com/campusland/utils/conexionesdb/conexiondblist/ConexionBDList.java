@@ -1,4 +1,4 @@
-package com.campusland.utils;
+package com.campusland.utils.conexionesdb.conexiondblist;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

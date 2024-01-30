@@ -1,10 +1,10 @@
-package com.campusland.respository.impl;
+package com.campusland.respository.impl.implcliente;
 
 import java.util.List;
 
 import com.campusland.respository.CrudRepositoryCliente;
 import com.campusland.respository.models.Cliente;
-import com.campusland.utils.ConexionBDList;
+import com.campusland.utils.conexionesdb.conexiondblist.ConexionBDList;
 
 public class CrudReposotoryClienteImp implements CrudRepositoryCliente {
 
@@ -48,9 +48,9 @@ public class CrudReposotoryClienteImp implements CrudRepositoryCliente {
     }
 
     @Override
-    public void eliminar(String id) {
+    public void eliminar(Cliente cli) {
         for (Cliente cliente : conexion.getListaClientes()) {
-            if (cliente.getDocumento().equals(id)) {
+            if (cliente.getDocumento().equals(cli.getDocumento())) {
                 conexion.getListaClientes().remove(cliente);
                 break;
             }
