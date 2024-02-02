@@ -2,15 +2,15 @@ package com.campusland.services.impl;
 
 import java.util.List;
 
-import com.campusland.respository.CrudRepositoryFactura;
+import com.campusland.respository.RepositoryFactura;
 import com.campusland.respository.models.Factura;
 import com.campusland.services.ServiceFactura;
 
 public class ServiceFacturaImpl implements ServiceFactura{
 
-    private final CrudRepositoryFactura crudRepositoryFactura;
+    private final RepositoryFactura crudRepositoryFactura;
 
-    public ServiceFacturaImpl(CrudRepositoryFactura crudRepositoryFactura){
+    public ServiceFacturaImpl(RepositoryFactura crudRepositoryFactura){
         this.crudRepositoryFactura=crudRepositoryFactura;
     }
 

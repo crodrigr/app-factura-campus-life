@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.campusland.respository.models.Factura;
 
-public interface CrudRepositoryFactura {
+public interface RepositoryFactura {
 
     List<Factura> listar();
 

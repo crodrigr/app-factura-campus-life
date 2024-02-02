@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.campusland.respository.models.Cliente;
 
-public interface CrudRepositoryCliente {
+public interface RepositoryCliente {
 
     List<Cliente> listar();
 

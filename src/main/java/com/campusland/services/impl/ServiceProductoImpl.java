@@ -3,15 +3,15 @@ package com.campusland.services.impl;
 import java.util.List;
 
 import com.campusland.exceptiones.clienteexceptions.ProductoNullException;
-import com.campusland.respository.CrudRepositoryProducto;
+import com.campusland.respository.RepositoryProducto;
 import com.campusland.respository.models.Producto;
 import com.campusland.services.ServiceProducto;
 
 public class ServiceProductoImpl implements ServiceProducto {
 
-    private final CrudRepositoryProducto crudRepositoryProducto;
+    private final RepositoryProducto crudRepositoryProducto;
 
-    public ServiceProductoImpl(CrudRepositoryProducto crudRepositoryProducto){
+    public ServiceProductoImpl(RepositoryProducto crudRepositoryProducto){
         this.crudRepositoryProducto=crudRepositoryProducto;
     }
 

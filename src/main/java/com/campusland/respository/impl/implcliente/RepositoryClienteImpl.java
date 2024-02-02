@@ -2,24 +2,23 @@ package com.campusland.respository.impl.implcliente;
 
 import java.util.List;
 
-import com.campusland.respository.CrudRepositoryCliente;
+import com.campusland.respository.RepositoryCliente;
 import com.campusland.respository.models.Cliente;
-import com.campusland.utils.conexionesdb.conexiondbjson.ConexionBDJson;
+import com.campusland.utils.conexionesdb.conexiondblist.ConexionBDList;
 
-public class CrudRepositoryClienteJsonImp implements CrudRepositoryCliente {
+public class RepositoryClienteImpl implements RepositoryCliente {
 
-    ConexionBDJson conexion = ConexionBDJson.getConexion();
+    ConexionBDList conexion = ConexionBDList.getConexion();
 
     @Override
     public List<Cliente> listar() {
-        return conexion.getDataClientes();
-
+        return conexion.getListaClientes();
     }
 
     @Override
     public Cliente porDocumento(String documento) {
         Cliente resultado = null;
-        for (Cliente cliente : conexion.getDataClientes()) {
+        for (Cliente cliente : conexion.getListaClientes()) {
             if (cliente.getDocumento().equals(documento)) {
                 resultado = cliente;
                 break;
@@ -31,46 +30,33 @@ public class CrudRepositoryClienteJsonImp implements CrudRepositoryCliente {
 
     @Override
     public void crear(Cliente cliente) {
-        List<Cliente> listaClientes=conexion.getDataClientes();
-        listaClientes.add(cliente);
-        conexion.saveDateClientes(listaClientes);        
+        conexion.getListaClientes().add(cliente);
     }
 
     @Override
     public void editar(Cliente cliente) {
-        List<Cliente> listClientes = conexion.getDataClientes();
-        boolean change = false;
-        for (Cliente clienteCurrent : listClientes) {
+        for (Cliente clienteCurrent : conexion.getListaClientes()) {
             if (clienteCurrent.getDocumento().equals(cliente.getDocumento())) {
                 clienteCurrent.setNombre(cliente.getNombre());
                 clienteCurrent.setApellido(cliente.getApellido());
                 clienteCurrent.setDireccion(cliente.getDireccion());
                 clienteCurrent.setEmail(cliente.getEmail());
                 clienteCurrent.setCelular(cliente.getCelular());
-                change = true;
                 break;
             }
         }
-        if (change)
-            conexion.saveDateClientes(listClientes);
-       
     }
 
     @Override
     public void eliminar(Cliente cli) {
-        List<Cliente> listClientes = conexion.getDataClientes();
-        boolean change = false;
-        for (Cliente cliente : listClientes) {
+        for (Cliente cliente : conexion.getListaClientes()) {
             if (cliente.getDocumento().equals(cli.getDocumento())) {
-                listClientes.remove(cliente);
-                change = true;
+                conexion.getListaClientes().remove(cliente);
                 break;
             }
 
         }
-        if (change)
-            conexion.saveDateClientes(listClientes);
-        
+
     }
 
 }

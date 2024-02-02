@@ -2,11 +2,11 @@ package com.campusland.respository.impl.implfactura;
 
 import java.util.List;
 
-import com.campusland.respository.CrudRepositoryFactura;
+import com.campusland.respository.RepositoryFactura;
 import com.campusland.respository.models.Factura;
 import com.campusland.utils.conexionesdb.conexiondblist.ConexionBDList;
 
-public class CrudRepositoryFacturaImp implements CrudRepositoryFactura {
+public class RepositoryFacturaJsonImpl implements RepositoryFactura {
 
     ConexionBDList conexion = ConexionBDList.getConexion();
 

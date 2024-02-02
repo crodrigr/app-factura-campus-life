@@ -3,15 +3,15 @@ package com.campusland.services.impl;
 import java.util.List;
 
 import com.campusland.exceptiones.clienteexceptions.ClienteNullException;
-import com.campusland.respository.CrudRepositoryCliente;
+import com.campusland.respository.RepositoryCliente;
 import com.campusland.respository.models.Cliente;
 import com.campusland.services.ServiceCliente;
 
 public class ServiceClienteImpl  implements ServiceCliente {
 
-    private final CrudRepositoryCliente crudRepositoryCliente;
+    private final RepositoryCliente crudRepositoryCliente;
 
-    public ServiceClienteImpl(CrudRepositoryCliente crudRepositoryCliente){
+    public ServiceClienteImpl(RepositoryCliente crudRepositoryCliente){
          this.crudRepositoryCliente=crudRepositoryCliente;
     }
 

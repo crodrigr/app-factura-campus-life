@@ -8,11 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.campusland.respository.CrudRepositoryCliente;
+import com.campusland.respository.RepositoryCliente;
 import com.campusland.respository.models.Cliente;
 import com.campusland.utils.conexionesdb.conexiondbmysql.ConexionBDMysql;
 
-public class CrudRepositoryClienteMysqlImp implements CrudRepositoryCliente {
+public class RepositoryClienteMysqlImpl implements RepositoryCliente {
 
     private Connection getConnection() throws SQLException {
         return ConexionBDMysql.getInstance();

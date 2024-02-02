@@ -2,11 +2,12 @@ package com.campusland.views;
 
 import java.util.Scanner;
 
-import com.campusland.respository.impl.implcliente.CrudRepositoryClienteJsonImp;
-import com.campusland.respository.impl.implcliente.CrudRepositoryClienteMysqlImp;
-import com.campusland.respository.impl.implcliente.CrudReposotoryClienteImp;
-import com.campusland.respository.impl.implfactura.CrudRepositoryFacturaImp;
-import com.campusland.respository.impl.implproducto.CrudRepositoryProductoImp;
+import com.campusland.respository.impl.implcliente.RepositoryClienteJsonImpl;
+import com.campusland.respository.impl.implcliente.RepositoryClienteMysqlImpl;
+import com.campusland.respository.impl.implcliente.RepositoryClienteImpl;
+import com.campusland.respository.impl.implfactura.RepositoryFacturaImpl;
+import com.campusland.respository.impl.implproducto.RepositoryProductoImpl;
+import com.campusland.respository.impl.implproducto.RepositoryProductoJsonImpl;
 import com.campusland.services.ServiceCliente;
 import com.campusland.services.ServiceFactura;
 import com.campusland.services.ServiceProducto;
@@ -16,9 +17,9 @@ import com.campusland.services.impl.ServiceProductoImpl;
 
 public class ViewMain {
 
-    public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new CrudRepositoryClienteMysqlImp());
-    public static final ServiceProducto serviceProducto = new ServiceProductoImpl(new CrudRepositoryProductoImp());
-    public static final ServiceFactura serviceFactura = new ServiceFacturaImpl(new CrudRepositoryFacturaImp());
+    public static final ServiceCliente serviceCliente = new ServiceClienteImpl(new RepositoryClienteMysqlImpl());
+    public static final ServiceProducto serviceProducto = new ServiceProductoImpl(new RepositoryProductoJsonImpl());
+    public static final ServiceFactura serviceFactura = new ServiceFacturaImpl(new RepositoryFacturaImpl());
     public static final Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {

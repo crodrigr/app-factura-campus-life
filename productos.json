@@ -1,0 +1,17 @@
+[ {
+  "codigo" : 1,
+  "nombre" : "Tv",
+  "descripcion" : "",
+  "precioVenta" : 1000.0,
+  "precioCompra" : 800.0,
+  "utilidad" : 200.0,
+  "codigoNombre" : "1 Tv $ 1.000,00"
+}, {
+  "codigo" : 2,
+  "nombre" : "Computador samsung",
+  "descripcion" : "",
+  "precioVenta" : 2500.0,
+  "precioCompra" : 1500.0,
+  "utilidad" : 1000.0,
+  "codigoNombre" : "2 Computador samsung $ 2.500,00"
+} ]

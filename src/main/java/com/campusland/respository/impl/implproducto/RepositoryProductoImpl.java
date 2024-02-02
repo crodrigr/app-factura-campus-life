@@ -2,11 +2,11 @@ package com.campusland.respository.impl.implproducto;
 
 import java.util.List;
 
-import com.campusland.respository.CrudRepositoryProducto;
+import com.campusland.respository.RepositoryProducto;
 import com.campusland.respository.models.Producto;
 import com.campusland.utils.conexionesdb.conexiondblist.ConexionBDList;
 
-public class CrudRepositoryProductoImp implements CrudRepositoryProducto{
+public class RepositoryProductoImpl implements RepositoryProducto{
 
     ConexionBDList conexion = ConexionBDList.getConexion();
 

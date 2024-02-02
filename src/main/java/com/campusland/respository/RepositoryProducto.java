@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.campusland.respository.models.Producto;
 
-public interface CrudRepositoryProducto {
+public interface RepositoryProducto {
 
      List<Producto> listar();
 
