@@ -31,18 +31,18 @@ public class RepositoryClienteJsonImpl implements RepositoryCliente {
 
     @Override
     public void crear(Cliente cliente) {
-        List<Cliente> listaClientes=conexion.getData(Cliente.class);
+        List<Cliente> listaClientes = conexion.getData(Cliente.class);
         listaClientes.add(cliente);
-        conexion.saveData(listaClientes); 
-             
+        conexion.saveData(listaClientes);
+
     }
 
     @Override
     public void editar(Cliente cliente) {
         List<Cliente> listClientes = conexion.getData(Cliente.class);
-    
+
         int index = listClientes.indexOf(cliente);
-    
+
         if (index != -1) {
             Cliente clienteCurrent = listClientes.get(index);
             clienteCurrent.setNombre(cliente.getNombre());
@@ -50,11 +50,10 @@ public class RepositoryClienteJsonImpl implements RepositoryCliente {
             clienteCurrent.setDireccion(cliente.getDireccion());
             clienteCurrent.setEmail(cliente.getEmail());
             clienteCurrent.setCelular(cliente.getCelular());
-    
+
             conexion.saveData(listClientes);
         }
     }
-    
 
     @Override
     public void eliminar(Cliente cli) {
@@ -70,7 +69,7 @@ public class RepositoryClienteJsonImpl implements RepositoryCliente {
         }
         if (change)
             conexion.saveData(listClientes);
-        
+
     }
 
 }
